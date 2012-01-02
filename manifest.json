@@ -9,7 +9,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://wordpress.org/extend/plugins/*"],
-			"js": ["jquery-1.7.1.min.js", "script.js"]
+			"js": ["script.js"]
 		}
 	]
 }
