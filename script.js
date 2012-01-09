@@ -18,6 +18,7 @@ if( plugin_slug && plugin_slug[1] && plugin_slug[1] != 'tags' ){
     var paragraph = document.createElement('p');
     paragraph.className='button';
     paragraph.style.background = '#21759b';
+    paragraph.style.marginTop = '5px';
     paragraph.appendChild(anchor);
 
     // attach it
