@@ -1,12 +1,12 @@
 var plugin_slug = location.pathname.match( /\/extend\/plugins\/([a-z0-9-]+)\//);
 if( plugin_slug && plugin_slug[1] && plugin_slug[1] != 'tags' ){
-    // Get the container
-    var container = document.querySelector("#plugin-description");
+    // Get the favorite button
+    var favorite = document.querySelector(".plugin-favorite");
     
     // Create some spacing
     var clearBreak = document.createElement('br');
     clearBreak.className='clear';
-    container.appendChild(clearBreak);
+    favorite.parentNode.insertBefore(clearBreak);
 
     // build our link
     var svnLink = 'http://plugins.svn.wordpress.org/' + location.pathname.match( /\/extend\/plugins\/([a-z0-9-]+)\//)[1] + '/';
@@ -21,7 +21,7 @@ if( plugin_slug && plugin_slug[1] && plugin_slug[1] != 'tags' ){
     paragraph.style.marginTop = '5px';
     paragraph.appendChild(anchor);
 
-    // attach it
-    container.appendChild(paragraph);
+    // sneak it in between the download link and favorite button
+		favorite.parentNode.insertBefore(paragraph, favorite);
 
 }
