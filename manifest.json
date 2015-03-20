@@ -9,7 +9,7 @@
 		"128": "wp-blue-large.png" },
 	"content_scripts": [
 		{
-			"matches": ["*://wordpress.org/plugins/*"],
+			"matches": ["*://wordpress.org/plugins/*", "*://wordpress.org/support/plugin/*" ],
 			"js": ["script.js"]
 		}
 	]

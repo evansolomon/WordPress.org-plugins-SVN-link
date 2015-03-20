@@ -1,4 +1,4 @@
-var plugin_slug = location.pathname.match(/\/plugins\/([a-z0-9-]+)\//);
+var plugin_slug = location.pathname.match(/\/plugins\/([a-z0-9-]+)\//) || location.pathname.match( /\/support\/plugin\/([a-z0-9-]+)\/?/ );
 if( plugin_slug && plugin_slug[1] && plugin_slug[1] != 'tags' ) {
 	// Get the container
 	var container = document.querySelector("#plugin-description");
@@ -11,7 +11,7 @@ if( plugin_slug && plugin_slug[1] && plugin_slug[1] != 'tags' ) {
 	clearBreak.className='clear';
 
 	// build our link
-	var svnLink = 'http://plugins.svn.wordpress.org/' + location.pathname.match(/\/plugins\/([a-z0-9-]+)\//)[1] + '/';
+	var svnLink = 'http://plugins.svn.wordpress.org/' + plugin_slug[1] + '/';
 	var anchor = document.createElement('a');
 	anchor.href=svnLink;
 	anchor.appendChild( document.createTextNode('SVN Repository') );
