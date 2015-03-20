@@ -33,7 +33,7 @@ if( plugin_slug && plugin_slug[1] && plugin_slug[1] != 'tags' ) {
 
 		if( favorite ) {
 			// Insert our spacing
-			favorite.parentNode.insertBefore(clearBreak);
+			favorite.parentNode.insertBefore(clearBreak, favorite);
 
 			// Sneak it in between the download link and favorite button
 			favorite.parentNode.insertBefore(paragraph, favorite);
